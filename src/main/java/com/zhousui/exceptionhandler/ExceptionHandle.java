@@ -17,11 +17,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @ControllerAdvice
 public class ExceptionHandle {
+
     private static final Logger logger = LoggerFactory.getLogger(ExceptionHandle.class);
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
+
+
+
+
     //@Responsebody与@RequestBody - guodefu909 - 博客园  http://www.cnblogs.com/guodefu909/p/4216327.html
-    //把异常信息放在一个公共类里面统一处理
+    //把异常信息放在一个公共类里面统一处理aaa
     public  Result handler(Exception exception)
     {
         if(exception instanceof GirlException)
